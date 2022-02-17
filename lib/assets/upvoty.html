@@ -1,0 +1,33 @@
+<div data-upvoty></div>
+<script type='text/javascript'>
+var script = document.createElement("script");
+
+script.onload = function () {
+
+    /*
+    From Upvoty provided widget code
+
+    boardHash points to specific board (i.e. bug report vs feature request)
+
+    ssoToken would be for if we ever want to map our users to pseudo upvoty accounts to allow
+    for remembering votes and allowing one for per user
+    */
+    upvoty.init('render', {
+        'boardHash': '$BOARD_HASH$',
+        'ssoToken': null,
+        'baseUrl': 'feedback.mytiki.com'
+    });
+
+    /*
+    Forces mobile version of site to render (it was showing desktop otherwise). Could perhaps be
+    slightly suboptimal for iPad/tablet but not really a concern
+    */
+    var meta = document.createElement('meta');
+    meta.setAttribute('name', 'viewport');
+    meta.setAttribute('content', 'width=device-width, initial-scale=1');
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(meta);
+};
+document.head.appendChild(script);
+script.src = 'https://feedback.mytiki.com/javascript/upvoty.embed.js';
+</script>

@@ -3,4 +3,12 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-class Upvoty {}
+import 'package:flutter/widgets.dart';
+
+import 'src/upvoty_widget.dart';
+
+class Upvoty {
+
+  Widget widget(String boardHash) => UpvotyWidget(boardHash);
+
+}
