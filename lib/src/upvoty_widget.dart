@@ -35,6 +35,8 @@ class _UpvotyWidgetState extends State<UpvotyWidget> {
             onWebViewCreated: (controller) {
               this._controller = controller;
               _loadLocalHTML(context);
+
+              //controller.evaluateJavascript("document.getElementsByClassName('post')[0].click()");
             }
         )
     );
