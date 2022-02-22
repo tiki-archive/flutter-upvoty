@@ -11,9 +11,8 @@ Future<void> main() async {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
 
-  // bug reports hash 8128a9001510536547329897a929cfe81f2664e69183dbeee371ba5a8eeecfa1
+  const MyApp({Key? key}) : super(key: key);
   // feature req hash 18f45b1940dc76aa9b42853dbedac71a18cd998d992c5dad6ec695af09b2a983
 
   @override
@@ -21,26 +20,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Upvoty().widget("18f45b1940dc76aa9b42853dbedac71a18cd998d992c5dad6ec695af09b2a983"),
-        ),
+          // TODO create the button that will pop the widgets
+          // one button for bug report and one for feature
+          child: Upvoty().bugReportBtn()
       ),
+    )
     );
   }
 }
-
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: const Text('Plugin example app'),
-//         ),
-//         body: Center(child: Text('Not implemented.')),
-//       ),
-//     );
-//   }
-// }
