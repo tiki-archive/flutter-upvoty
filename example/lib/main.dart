@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:logging/logging.dart';
 import 'package:upvoty/upvoty.dart';
 
+import 'package:upvoty/src/upvoty_view_board.dart';
+
+
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Logger.root.level = Level.ALL;
@@ -20,27 +23,36 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Upvoty().widget("18f45b1940dc76aa9b42853dbedac71a18cd998d992c5dad6ec695af09b2a983"),
-        ),
+        body:Container(
+          padding: EdgeInsets.only(top: 250),
+          child: Button()
+        )
       ),
     );
   }
 }
 
+class Button extends StatelessWidget {
 
-// class MyApp extends StatelessWidget {
-//   const MyApp({Key? key}) : super(key: key);
-//
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: const Text('Plugin example app'),
-//         ),
-//         body: Center(child: Text('Not implemented.')),
-//       ),
-//     );
-//   }
-// }
+  @override
+  Widget build(BuildContext context) {
+    Upvoty up = Upvoty(
+        style: UpvotyStyle(
+          mediaQueryData: MediaQuery.of(context),
+          fontFamily: "NunitoSans",
+          headerColor: Color(0xFF27002E), // Tiki Purple
+        )
+    );
+    return Center(
+      child: Column(
+        children: [
+          up.buttonSuggestions(),
+          up.buttonBugs()
+        ]
+      ),
+    );
+  }
+
+
+
+}
