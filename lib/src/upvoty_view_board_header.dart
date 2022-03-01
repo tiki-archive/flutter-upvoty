@@ -26,7 +26,7 @@ class UpvotyViewBoardHeader extends StatelessWidget {
     return Stack(children: [
       GestureDetector(
           behavior: HitTestBehavior.opaque,
-          onTap: () => print("Test"),
+          onTap: () => Navigator.of(context).pop(),
           child: Container(
               alignment: Alignment.centerRight,
               child: Container(
@@ -41,10 +41,10 @@ class UpvotyViewBoardHeader extends StatelessWidget {
                   ))))),
         GestureDetector(
             behavior: HitTestBehavior.opaque,
-            onTap: () => service.controller.navigateBack(context),
+            onTap: () => {print("Back Arrow"), service.controller.navigateBack(context)},
             child: Container(
                 alignment: Alignment.centerLeft,
-                //width: service.style.size(_paddingHoriz) * 3,
+                width: service.style.size(_paddingHoriz) * 3,
                 child: Container(
                     width: service.style.size(_paddingHoriz) * 3,
                     height: service.style.size(_paddingVert) * 3,
