@@ -12,17 +12,17 @@ class UpvotyStyle {
   final double _deviceWidth;
   final double _textScaleFactor;
 
-  final Color _headerColor;
+  final Color _textColor;
 
   String _fontFamily;
 
   UpvotyStyle(
       {MediaQueryData? mediaQueryData,
-      Color headerColor = headerDef,
+      Color textColor = headerDef,
       String fontFamily = 'Arial'})
       : _textScaleFactor = mediaQueryData?.textScaleFactor ?? 1.0,
         _deviceWidth = mediaQueryData?.size.width ?? 375,
-        _headerColor = headerColor,
+        _textColor = textColor,
         _fontFamily = fontFamily;
 
 
@@ -31,7 +31,7 @@ class UpvotyStyle {
   double text(double raw) =>
       (raw * (_deviceWidth / _stdDeviceWidth)) * _textScaleFactor;
 
-  Color get headerColor => _headerColor;
+  Color get textColor => _textColor;
 
   String get fontFamily => _fontFamily;
 

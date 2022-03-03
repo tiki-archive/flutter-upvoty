@@ -8,6 +8,4 @@ class UpvotyController {
 
   UpvotyController(this._service);
 
-  navigateBack(BuildContext context) {}
-
 }

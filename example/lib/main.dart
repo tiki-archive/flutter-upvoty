@@ -40,7 +40,7 @@ class Button extends StatelessWidget {
         style: UpvotyStyle(
           mediaQueryData: MediaQuery.of(context),
           fontFamily: "NunitoSans",
-          headerColor: Color(0xFF27002E), // Tiki Purple
+          textColor: Color(0xFF27002E), // Tiki Purple
         )
     );
     return Center(

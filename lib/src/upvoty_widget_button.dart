@@ -19,10 +19,6 @@ class UpvotyWidgetButton extends StatelessWidget {
     return GestureDetector(
         onTap: () => _service.presenter.showModal(context, _title, _boardHash),
         child: Container(
-            margin: EdgeInsets.symmetric(
-                vertical: _service.style.size(17),
-                horizontal: _service.style.size(17)
-            ),
             padding: EdgeInsets.symmetric(
                 vertical: _service.style.size(17),
                 horizontal: _service.style.size(17)),
@@ -36,6 +32,7 @@ class UpvotyWidgetButton extends StatelessWidget {
                 children: <Widget>[
                   Icon(
                     _icon,
+                    color: _service.style.textColor,
                     size: _service.style.text(24),
                   ),
                   Padding(
@@ -48,6 +45,7 @@ class UpvotyWidgetButton extends StatelessWidget {
                               fontWeight: FontWeight.bold))),
                   Icon(
                     UpvotyIcons.right_arrow,
+                    color: _service.style.textColor,
                     size: _service.style.text(16),
                   )
                 ])));

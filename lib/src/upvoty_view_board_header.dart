@@ -14,6 +14,7 @@ import 'upvoty_style.dart';
 class UpvotyViewBoardHeader extends StatelessWidget {
 
   String _text;
+
   static const double _paddingHoriz = 13;
   static const double _paddingVert = 24;
 
@@ -26,7 +27,7 @@ class UpvotyViewBoardHeader extends StatelessWidget {
     return Stack(children: [
       GestureDetector(
           behavior: HitTestBehavior.opaque,
-          onTap: () => Navigator.of(context).pop(),
+          //onTap: service.pressX(context),
           child: Container(
               alignment: Alignment.centerRight,
               child: Container(
@@ -37,11 +38,11 @@ class UpvotyViewBoardHeader extends StatelessWidget {
                       child: Icon(
                         UpvotyIcons.x,
                         size: service.style.text(16),
-                        color: style.headerColor
+                        color: style.textColor
                   ))))),
         GestureDetector(
             behavior: HitTestBehavior.opaque,
-            onTap: () => {print("Back Arrow"), service.controller.navigateBack(context)},
+            //onTap: service.pressBack(context),
             child: Container(
                 alignment: Alignment.centerLeft,
                 width: service.style.size(_paddingHoriz) * 3,
@@ -53,7 +54,7 @@ class UpvotyViewBoardHeader extends StatelessWidget {
                         child: Icon(
                           UpvotyIcons.left_arrow,
                           size: service.style.text(16),
-                          color: style.headerColor
+                          color: style.textColor
                         ))))),
       Container(
           alignment: Alignment.center,
@@ -62,7 +63,7 @@ class UpvotyViewBoardHeader extends StatelessWidget {
           ),
           child: Text(_text,
               style: TextStyle(
-                  color: style.headerColor,
+                  color: style.textColor,
                   fontWeight: FontWeight.w800,
                   fontFamily: service.style.fontFamily,
                   fontSize: service.style.text(16)))),

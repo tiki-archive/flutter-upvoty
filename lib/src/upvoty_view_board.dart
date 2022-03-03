@@ -14,6 +14,7 @@ import 'package:webview_flutter/webview_flutter.dart';
 import 'upvoty_view_board_header.dart';
 
 class UpvotyViewBoard extends StatefulWidget {
+
   final String _boardHash, _headerTitle;
 
   UpvotyViewBoard(this._headerTitle, this._boardHash);
@@ -24,8 +25,10 @@ class UpvotyViewBoard extends StatefulWidget {
 }
 
 class _UpvotyViewBoard extends State<UpvotyViewBoard> {
+
   WebViewController? _controller;
   final String _headerTitle, _boardHash;
+
 
   _UpvotyViewBoard(this._headerTitle, this._boardHash);
 
