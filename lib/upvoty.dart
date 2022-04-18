@@ -3,7 +3,8 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-import 'src/upvoty_icons.dart';
+import 'package:style/style.dart';
+
 import 'src/upvoty_service.dart';
 import 'src/upvoty_style.dart';
 import 'src/upvoty_widget_button.dart';
@@ -19,12 +20,12 @@ class Upvoty {
   buttonSuggestions() => UpvotyWidgetButton(
       _service,
       "Request a feature!",
-      UpvotyIcons.light_bulb,
+      IconProvider.light_bulb,
       "18f45b1940dc76aa9b42853dbedac71a18cd998d992c5dad6ec695af09b2a983");
 
   buttonBugs() => UpvotyWidgetButton(
       _service,
       "Report a bug!",
-      UpvotyIcons.bug,
+      IconProvider.bug_report,
       "8128a9001510536547329897a929cfe81f2664e69183dbeee371ba5a8eeecfa1");
 }

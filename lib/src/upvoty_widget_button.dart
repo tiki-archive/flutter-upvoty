@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:style/style.dart';
 
-import 'upvoty_icons.dart';
 import 'upvoty_service.dart';
 
 class UpvotyWidgetButton extends StatelessWidget {
@@ -47,7 +47,7 @@ class UpvotyWidgetButton extends StatelessWidget {
                               fontFamily: _service.style.fontFamily,
                               fontWeight: FontWeight.bold))),
                   Icon(
-                    UpvotyIcons.right_arrow,
+                    IconProvider.keyboard_arrow_right,
                     size: _service.style.text(16),
                   )
                 ])));
