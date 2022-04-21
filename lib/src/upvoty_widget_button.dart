@@ -36,7 +36,7 @@ class UpvotyWidgetButton extends StatelessWidget {
                     size: _service.style.text(24),
                   ),
                   Padding(
-                      padding: EdgeInsets.only(right: _service.style.size(8))),
+                      padding: EdgeInsets.only(right: _service.style.size(10))),
                   Expanded(
                       child: Text(_title,
                           style: TextStyle(
