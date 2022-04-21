@@ -27,7 +27,7 @@ class UpvotyViewBoardHeader extends StatelessWidget {
     return Stack(children: [
       GestureDetector(
           behavior: HitTestBehavior.opaque,
-          //onTap: service.pressX(context),
+          onTap: () => service.pressX(context),
           child: Container(
               alignment: Alignment.centerRight,
               child: Container(
@@ -42,7 +42,7 @@ class UpvotyViewBoardHeader extends StatelessWidget {
                   ))))),
         GestureDetector(
             behavior: HitTestBehavior.opaque,
-            //onTap: service.pressBack(context),
+            onTap: () => service.pressBack(context),
             child: Container(
                 alignment: Alignment.centerLeft,
                 width: service.style.size(_paddingHoriz) * 3,

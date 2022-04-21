@@ -16,7 +16,7 @@ class UpvotyPresenter {
   }
 
   Future<void> showModal(BuildContext context, String title, String boardHash) {
-    //Navigator.of(context).pop();
+    Navigator.of(context).pop();
 
     return showModalBottomSheet<void>(
         context: context,
