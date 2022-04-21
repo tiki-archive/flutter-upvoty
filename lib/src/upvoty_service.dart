@@ -10,7 +10,7 @@ class UpvotyService extends ChangeNotifier {
   late final UpvotyPresenter presenter;
   late final UpvotyController controller;
   final UpvotyStyle style;
-  final Function(BuildContext) pressBack, pressX;
+  final void Function(BuildContext) pressBack, pressX;
 
   UpvotyService(this.style, this.pressBack, this.pressX) {
     presenter = UpvotyPresenter(this);

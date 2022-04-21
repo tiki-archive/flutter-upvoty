@@ -40,7 +40,7 @@ class UpvotyWidgetButton extends StatelessWidget {
                   Expanded(
                       child: Text(_title,
                           style: TextStyle(
-                              fontSize: _service.style.text(16),
+                              fontSize: _service.style.text(12),
                               fontFamily: _service.style.fontFamily,
                               fontWeight: FontWeight.bold))),
                   Icon(
