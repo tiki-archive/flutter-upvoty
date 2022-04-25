@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:style/style.dart';
 import 'upvoty_service.dart';
 import 'upvoty_view_board.dart';
 
@@ -20,7 +21,7 @@ class UpvotyPresenter {
         context: context,
         isScrollControlled: true,
         isDismissible: true,
-        backgroundColor: Color(0xFFF0F0F0),
+        backgroundColor: ColorProvider.greyTwo,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(top: Radius.circular(_service.style.size(40)))),
         builder: (BuildContext context) => render(title, boardHash));
