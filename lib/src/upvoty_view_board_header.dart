@@ -6,8 +6,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
+import 'package:style/style.dart';
 
-import 'upvoty_icons.dart';
 import 'upvoty_service.dart';
 import 'upvoty_style.dart';
 
@@ -36,7 +36,7 @@ class UpvotyViewBoardHeader extends StatelessWidget {
                   padding: EdgeInsets.only(right: service.style.size(25)),
                   child: Center(
                       child: Icon(
-                        UpvotyIcons.x,
+                        IconProvider.close,
                         size: service.style.text(16),
                         color: style.textColor
                   ))))),
@@ -52,7 +52,7 @@ class UpvotyViewBoardHeader extends StatelessWidget {
                     padding: EdgeInsets.only(left: service.style.size(13)),
                     child: Center(
                         child: Icon(
-                          UpvotyIcons.left_arrow,
+                          IconProvider.keyboard_arrow_left,
                           size: service.style.text(16),
                           color: style.textColor
                         ))))),
