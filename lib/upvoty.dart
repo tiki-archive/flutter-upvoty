@@ -4,7 +4,7 @@
  */
 
 import 'package:style/style.dart';
-
+import 'package:flutter/cupertino.dart';
 import 'src/upvoty_service.dart';
 import 'src/upvoty_style.dart';
 import 'src/upvoty_widget_button.dart';
@@ -14,8 +14,14 @@ export 'src/upvoty_style.dart';
 class Upvoty {
   final UpvotyService _service;
 
-  Upvoty({UpvotyStyle? style})
-      : _service = UpvotyService(style ?? UpvotyStyle());
+  Upvoty(
+      {UpvotyStyle? style,
+      Function(BuildContext)? pressBack,
+      Function(BuildContext)? pressX})
+      : _service = UpvotyService(
+            style ?? UpvotyStyle(),
+            pressBack ?? (context) => Navigator.of(context).pop(),
+            pressX ?? (context) => Navigator.of(context).pop());
 
   buttonSuggestions() => UpvotyWidgetButton(
       _service,
