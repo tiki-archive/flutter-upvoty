@@ -3,7 +3,7 @@
  * MIT license. See LICENSE file in root directory.
  */
 
-import 'package:style/style.dart';
+import 'package:tiki_style/tiki_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'src/upvoty_service.dart';
 import 'src/upvoty_style.dart';
