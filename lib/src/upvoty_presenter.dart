@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:style/style.dart';
+import 'package:tiki_style/tiki_style.dart';
 import 'upvoty_service.dart';
 import 'upvoty_view_board.dart';
 

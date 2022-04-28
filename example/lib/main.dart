@@ -4,7 +4,6 @@ import 'package:upvoty/upvoty.dart';
 
 import 'package:upvoty/src/upvoty_view_board.dart';
 
-
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Logger.root.level = Level.ALL;
