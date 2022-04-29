@@ -1,4 +1,4 @@
-name: upvoty
+name: tiki_upvoty
 description: flutter lib for upvoty
 version: 0.0.5
 homepage: https://mytiki.com
@@ -12,8 +12,9 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  webview_flutter: ^2.0.0
+  webview_flutter: ^3.0.2
   provider: ^6.0.2
+  tiki_style: ^0.0.11
 
 dev_dependencies:
   flutter_test:
@@ -28,7 +29,3 @@ flutter:
 
   assets:
     - packages/upvoty/assets/upvoty.html
-  fonts:
-    - family: UpvotyIcons
-      fonts:
-        - asset: packages/upvoty/assets/fonts/UpvotyIcons.ttf

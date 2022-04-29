@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:tiki_style/tiki_style.dart';
 
-import 'upvoty_icons.dart';
 import 'upvoty_service.dart';
 
 class UpvotyWidgetButton extends StatelessWidget {
 
-  UpvotyService _service;
-  IconData _icon;
-  String _title, _boardHash;
+  final UpvotyService _service;
+  final IconData _icon;
+  final String _title, _boardHash;
 
   // icon-alert is good for bug (maybe no color)
   // icon-act-plus for new feature
@@ -20,11 +20,11 @@ class UpvotyWidgetButton extends StatelessWidget {
         onTap: () => _service.presenter.showModal(context, _title, _boardHash),
         child: Container(
             padding: EdgeInsets.symmetric(
-                vertical: _service.style.size(17),
-                horizontal: _service.style.size(17)),
+                vertical: SizeProvider.instance.size(17),
+                horizontal: SizeProvider.instance.size(17)),
             decoration: BoxDecoration(
               color: Color(0xFFF0F0F0), //ConfigColor.greyTwo,
-              borderRadius: BorderRadius.circular(_service.style.size(12)),
+              borderRadius: BorderRadius.circular(SizeProvider.instance.size(12)),
             ),
             child: Row(
                 mainAxisAlignment: MainAxisAlignment.start,
@@ -32,21 +32,21 @@ class UpvotyWidgetButton extends StatelessWidget {
                 children: <Widget>[
                   Icon(
                     _icon,
-                    color: _service.style.textColor,
-                    size: _service.style.text(24),
+                    color: ColorProvider.tikiBlack,
+                    size: SizeProvider.instance.text(24),
                   ),
                   Padding(
-                      padding: EdgeInsets.only(right: _service.style.size(10))),
+                      padding: EdgeInsets.only(right: SizeProvider.instance.size(10))),
                   Expanded(
                       child: Text(_title,
                           style: TextStyle(
-                              fontSize: _service.style.text(12),
-                              fontFamily: _service.style.fontFamily,
+                              fontSize: SizeProvider.instance.text(12),
+                              fontFamily: TextProvider.familyNunitoSans,
+                              package: 'tiki_style',
                               fontWeight: FontWeight.bold))),
                   Icon(
-                    UpvotyIcons.right_arrow,
-                    color: _service.style.textColor,
-                    size: _service.style.text(16),
+                    IconProvider.arrow_right,
+                    size: SizeProvider.instance.text(16),
                   )
                 ])));
   }
