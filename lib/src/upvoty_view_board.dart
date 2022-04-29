@@ -74,7 +74,7 @@ class _UpvotyViewBoard extends State<UpvotyViewBoard> {
 
   void _loadLocalHTML(BuildContext context) async {
     String html = await DefaultAssetBundle.of(context)
-        .loadString('packages/upvoty/assets/upvoty.html');
+        .loadString('packages/tiki_upvoty/assets/upvoty.html');
 
     html = html.replaceFirst("\$BOARD_HASH\$", _boardHash);
 
