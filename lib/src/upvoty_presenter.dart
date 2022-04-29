@@ -25,7 +25,7 @@ class UpvotyPresenter {
         isDismissible: true,
         backgroundColor: ColorProvider.greyTwo,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(_service.style.size(40)))),
+            borderRadius: BorderRadius.vertical(top: Radius.circular(SizeProvider.instance.size(40)))),
         builder: (BuildContext context) => render(title, boardHash));
   }
 }
