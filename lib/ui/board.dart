@@ -11,7 +11,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
-import 'upvoty_view_board_header.dart';
+import 'board_header.dart';
 
 class UpvotyViewBoard extends StatefulWidget {
 
