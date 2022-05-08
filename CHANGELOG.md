@@ -1,3 +1,7 @@
+## 0.0.12
+
+* bumped tiki_style version
+
 ## 0.0.11
 
 * fix load string path
