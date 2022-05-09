@@ -9,10 +9,12 @@ class UpvotyWidgetButton extends StatelessWidget {
   final IconData _icon;
   final String _title, _boardHash;
 
+  Color _color;
+
   // icon-alert is good for bug (maybe no color)
   // icon-act-plus for new feature
 
-  UpvotyWidgetButton(this._service, this._title, this._icon, this._boardHash);
+  UpvotyWidgetButton(this._service, this._title, this._icon, this._boardHash, this._color);
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class UpvotyWidgetButton extends StatelessWidget {
                 vertical: SizeProvider.instance.size(17),
                 horizontal: SizeProvider.instance.size(17)),
             decoration: BoxDecoration(
-              color: Color(0xFFF0F0F0), //ConfigColor.greyTwo,
+              color: ColorProvider.greyTwo,
               borderRadius: BorderRadius.circular(SizeProvider.instance.size(12)),
             ),
             child: Row(
@@ -32,7 +34,7 @@ class UpvotyWidgetButton extends StatelessWidget {
                 children: <Widget>[
                   Icon(
                     _icon,
-                    color: ColorProvider.tikiBlack,
+                    color: _color,
                     size: SizeProvider.instance.text(24),
                   ),
                   Padding(
@@ -43,9 +45,11 @@ class UpvotyWidgetButton extends StatelessWidget {
                               fontSize: SizeProvider.instance.text(12),
                               fontFamily: TextProvider.familyNunitoSans,
                               package: 'tiki_style',
+                              color: _color,
                               fontWeight: FontWeight.bold))),
                   Icon(
                     IconProvider.arrow_right,
+                    color: _color,
                     size: SizeProvider.instance.text(16),
                   )
                 ])));
