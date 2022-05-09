@@ -5,8 +5,8 @@
 
 import 'package:tiki_style/tiki_style.dart';
 import 'package:flutter/cupertino.dart';
-import 'service.dart';
-import 'ui/button.dart';
+import 'src/upvoty_service.dart';
+import 'src/upvoty_widget_button.dart';
 
 class TikiUpvoty {
   final UpvotyService _service;

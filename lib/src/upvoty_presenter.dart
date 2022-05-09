@@ -2,8 +2,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:tiki_style/tiki_style.dart';
-import 'service.dart';
-import 'ui/board.dart';
+import 'upvoty_service.dart';
+import 'upvoty_view_board.dart';
 
 class UpvotyPresenter {
 
