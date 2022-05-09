@@ -8,7 +8,7 @@ import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:tiki_style/tiki_style.dart';
 
-import 'upvoty_service.dart';
+import '../service.dart';
 
 class UpvotyViewBoardHeader extends StatelessWidget {
 
