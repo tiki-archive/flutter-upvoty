@@ -1,3 +1,8 @@
+## 0.0.13
+
+* update design
+* fix example app build
+
 ## 0.0.12
 
 * bumped tiki_style version
