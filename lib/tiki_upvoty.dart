@@ -5,8 +5,8 @@
 
 import 'package:tiki_style/tiki_style.dart';
 import 'package:flutter/cupertino.dart';
-import 'src/upvoty_service.dart';
-import 'src/upvoty_widget_button.dart';
+import 'service.dart';
+import 'ui/button.dart';
 
 class TikiUpvoty {
   final UpvotyService _service;
@@ -22,11 +22,14 @@ class TikiUpvoty {
       _service,
       "Request a feature!",
       IconProvider.bulb,
-      "18f45b1940dc76aa9b42853dbedac71a18cd998d992c5dad6ec695af09b2a983");
+      "18f45b1940dc76aa9b42853dbedac71a18cd998d992c5dad6ec695af09b2a983",
+      ColorProvider.tikiBlue);
 
   buttonBugs() => UpvotyWidgetButton(
       _service,
       "Report a bug!",
       IconProvider.bug,
-      "8128a9001510536547329897a929cfe81f2664e69183dbeee371ba5a8eeecfa1");
+      "8128a9001510536547329897a929cfe81f2664e69183dbeee371ba5a8eeecfa1",
+      ColorProvider.red
+  );
 }

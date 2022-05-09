@@ -1,8 +1,8 @@
 
 import 'package:flutter/material.dart';
-import 'upvoty_controller.dart';
+import 'controller.dart';
 
-import 'upvoty_presenter.dart';
+import 'presenter.dart';
 
 class UpvotyService extends ChangeNotifier {
 
