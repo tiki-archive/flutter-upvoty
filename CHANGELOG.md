@@ -1,3 +1,7 @@
+## 0.0.14
+
+* update buttons sizing
+
 ## 0.0.13
 
 * update design
